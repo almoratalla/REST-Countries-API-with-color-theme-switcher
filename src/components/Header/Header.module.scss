@@ -1,0 +1,33 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.container__header {
+    background: var(--bg);
+    box-shadow: 0px 2px 15px rgba(143, 143, 143, 0.4);
+    border: none;
+    
+    header.header {
+        padding: 1.8125rem 5rem;
+        @include flexMixin(row);
+        h1.header__logobrand { color: var(--text)}
+
+        .header__themeswitch{
+            input { display: none;}
+            label {
+                @include flexMixin(row);
+                img {
+                    margin: 0 0.8rem;
+                    transform: scale(1);
+                    height: 1rem;
+                    width: auto;
+                }
+
+                span {
+                    color: var(--text);
+                    font-weight: map-get($rcawct-font-weights, "extra-bold");
+
+                }
+            }
+        }
+    }
+}
