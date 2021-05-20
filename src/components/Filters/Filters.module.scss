@@ -1,0 +1,139 @@
+@import '../../styles/config/mixins';
+
+.container__filters {
+    height: 3.75rem;
+    width: inherit;
+    // margin-bottom: 3rem;
+    @include flexMixin(row);
+    
+    .container__search {
+        width: 30rem;
+        display: flex;
+        background: var(--el);
+        height: inherit;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border-radius: 5px;
+
+        label { display: none;}
+        input { 
+            padding: 0 1rem;
+            border: none;
+            outline: none;
+            width: 25rem;
+            background: transparent;
+            color: var(--text);
+        }
+
+        svg {
+            fill: var(--text);
+            transform: scale(0.9);
+        }
+    }
+
+    .container__selectfilter {
+        width: 12.5rem;
+        background: var(--el);
+        height: 3.75rem;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+        .selectbox {
+            position: relative;
+            label {
+                color: var(--text);
+                position: absolute;
+                top: 1rem;
+                left: 1.5625rem;
+            }
+    
+            select.overlap {
+                height: inherit;
+                background: transparent;
+                width: 12.5rem;
+                outline: none;
+                color: var(--text);
+                left: 0;
+                border: 1rem solid transparent;
+            }
+            
+            .overselect {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+
+        .checkboxes {
+            border: none;
+            position: absolute;
+            background: var(--el);
+            width: 12.5rem;
+            top: calc(3.75rem + 0.5rem);
+            border-radius: 5px;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+            div.checkboxes__optgroup{
+                max-height: 20rem;
+                overflow-y: auto;
+                padding: 0.5rem 1.5rem ;
+
+                label{
+                    margin: 0.2rem 0;
+                    font-size: 0.9rem;
+                    display: flex;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    color: var(--text);
+                    padding: 0.2rem 0;
+    
+                    span {
+                        margin: 0;
+                    }
+                    
+                    input {
+                        margin-right: 0.5rem;
+                    }
+                    
+                    span {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .filtersubmit{
+                display: flex;
+                justify-content: flex-end;
+                border: 1px black;
+                background-color: transparent;
+                padding: 0.5rem 1rem;
+                position: sticky;
+                bottom: 0;
+
+                label{
+                    background: rgb(1,119,215);
+                    border: none;
+                    width: fit-content;
+
+                    input {
+                        background: none;
+                        outline: none;
+                        border: none;
+                        color: white; 
+                        width: inherit;
+                        padding: 0.2em 1em;
+                    }
+                    
+                }
+            }
+        }
+
+        
+    }
+}
+
