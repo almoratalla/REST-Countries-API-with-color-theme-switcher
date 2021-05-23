@@ -1,0 +1,10 @@
+.container__body {
+    padding: 0rem 5rem;
+    min-height: calc(100vh - 6.625rem);
+    background: var(--bg);
+
+    main {
+        background: var(--bg);
+        padding: 3rem 0;
+    }
+}

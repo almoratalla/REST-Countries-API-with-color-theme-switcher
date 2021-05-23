@@ -1,120 +1,51 @@
 @import "../../styles/config/mixins";
 @import "../../styles/config/variables";
 
-.container__home {
-    padding: 0rem 5rem;
-    min-height: calc(100vh - 6.625rem);
-    background: var(--bg);
+.container__countrieslist {
+    padding: 3rem 0;
 
-    main {
-        background: var(--bg);
-        padding: 3rem 0;
+    .container__error {
+        display: flex;
+        padding: 4rem 2rem;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background: var(--el);
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 
-        .container__countrieslist {
-            padding: 3rem 0;
+        h3 { color: var(--text);}
+        span { color: var(--text);}
+    }
 
-            .container__error {
-                display: flex;
-                padding: 4rem 2rem;
-                flex-flow: column nowrap;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                background: var(--el);
-                border-radius: 10px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-
-                h3 { color: var(--text);}
-                span { color: var(--text);}
-            }
-
-            .container__loader {
-                display: flex;
-                padding: 4rem 2rem;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                background: #fff;
-                border-radius: 10px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                span {
-                    font-weight: 600;
-                    font-size: 1.2rem;
-                    text-align: center;
-                }
-
-                img {
-                    margin: 0 0 0 2rem;
-                }
-            }
-
-            ul.countrieslist{
-                list-style: none;
-                display: grid;
-                column-gap: 4.6875rem;
-                row-gap: 4.6875rem;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-
-                li.li__container {
-                    // height: 21.125rem;
-                    // height: calc((0.33 * 100vh) + 10rem);
-                    border-radius: 10px;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                    background: var(--el);
-
-                    .li__countrycard{
-                        height: inherit;
-                        width: inherit;
-                        display: flex;
-                        flex-flow: column nowrap;
-
-                        .countrycard__img {
-                            min-height: 10rem;
-                            border-radius: 10px 10px 0 0;
-
-                            img {
-                                height: auto;
-                                max-height: 10rem;
-                                width: max-content;
-                                border-radius: 10px 10px 0 0;
-                            }
-                        }
-                        
-                        
-
-                        .countrycard__details {
-                            min-height: 10rem;
-                            padding: 1.8125rem 1.375rem;
-                            padding: 10% 8%;
-                            color: var(--text);
-
-                            .countrycard__details__sub {
-                                margin: 1rem 0;
-                                
-                                li {
-                                    display: flex;
-                                    flex-flow: row nowrap;
-                                    align-items: center;
-                                    font-size: 1rem;
-                                    
-
-                                    h5 {
-                                        margin-right: 0.5rem;
-                                        font-size: 1rem;
-                                        font-weight: map-get($rcawct-font-weights, "semi-bold" );
-                                        // font-weight: normal;
-                                    }
-
-                                    span {
-                                        font-size: 1rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    .container__loader {
+        display: flex;
+        padding: 4rem 2rem;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        span {
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: center;
         }
+
+        img {
+            margin: 0 0 0 2rem;
+        }
+    }
+
+    ul.countrieslist{
+        list-style: none;
+        display: grid;
+        column-gap: 4.6875rem;
+        row-gap: 4.6875rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
     }
 }
