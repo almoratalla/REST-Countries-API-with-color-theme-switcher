@@ -1,43 +1,45 @@
 @import '../../styles/config/mixins';
 
 .container__filters {
-    height: 3.75rem;
+    height: 8.5rem;
     width: inherit;
-    // margin-bottom: 3rem;
-    @include flexMixin(row);
+    @include flexMixin(column);
     
     .container__search {
-        width: 30rem;
+        width: calc(100vw - 2rem);
+        height: 3rem;
         display: flex;
         background: var(--el);
-        height: inherit;
         padding: 1rem 2rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         border-radius: 5px;
+        align-items: center;
 
-        label { display: none;}
+        label { display: none;} 
         input { 
-            padding: 0 1rem;
+            padding: 0 1.625rem;
             border: none;
             outline: none;
-            width: 25rem;
+            width: 16.375rem;
             background: transparent;
             color: var(--text);
+            font-size: 0.8rem;
         }
 
         svg {
             fill: var(--text);
-            transform: scale(0.9);
+            transform: scale(0.7);
         }
     }
 
     .container__selectfilter {
         width: 12.5rem;
         background: var(--el);
-        height: 3.75rem;
+        height: 3rem;
         position: relative;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        align-self: flex-start;
 
         .selectbox {
             position: relative;
@@ -46,16 +48,18 @@
                 position: absolute;
                 top: 1rem;
                 left: 1.5625rem;
+                font-size: 0.8rem;
             }
     
             select.overlap {
+                color: var(--text);
                 height: inherit;
                 background: transparent;
                 width: 12.5rem;
                 outline: none;
-                color: var(--text);
                 left: 0;
-                border: 1rem solid transparent;
+                border: 0.8rem solid transparent;
+                border-right-width: 1rem;
             }
             
             .overselect {
@@ -72,7 +76,7 @@
             position: absolute;
             background: var(--el);
             width: 12.5rem;
-            top: calc(3.75rem + 0.5rem);
+            top: calc(3rem + 0.5rem);
             border-radius: 5px;
             outline: none;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -137,3 +141,54 @@
     }
 }
 
+// 1440px x 1024px and 1280 x 578
+@media screen and (min-width: 1100px) {
+
+    .container__filters {
+        height: 3.75rem;
+        width: inherit;
+        // margin-bottom: 3rem;
+        @include flexMixin(row);
+        
+        .container__search {
+            width: 30rem;
+            display: flex;
+            background: var(--el);
+            height: inherit;
+    
+            input { 
+                padding: 0 1rem;
+                width: 25rem;
+                font-size: 1rem;
+            }
+    
+            svg {
+                transform: scale(0.9);
+            }
+        }
+    
+        .container__selectfilter {
+            height: 3.75rem;
+            align-self: unset;
+    
+            .selectbox {
+                position: relative;
+                label {
+                    color: var(--text);
+                    position: absolute;
+                    top: 1rem;
+                    left: 1.5625rem;
+                    font-size: 1rem;
+                }
+        
+                select.overlap {
+                    border: 1rem solid transparent;
+                }
+            }
+            
+            .checkboxes {
+                top: calc(3.75rem + 0.5rem);
+            }
+        }
+    }
+}
