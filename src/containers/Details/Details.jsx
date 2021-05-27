@@ -103,7 +103,7 @@ const Details = () => {
                             <div className={styles.container__tagspace}>
                                 {!bordersNames.length ? <span>No borders found in data</span> :
                                     bordersNames.map((border,i) => (
-                                        <Link className={styles.container__tags} to={`/details/${detailData.borders && detailData.borders[0]}`} key={`${border.name}-${i}`}>
+                                        <Link className={styles.container__tags} to={`/details/${detailData.borders && detailData.borders[0].toLowerCase()}`} key={`${border.name}-${i}`}>
                                             <span className={styles.tags__borders}>{border && border.name}</span>
                                         </Link>
                                     ))
