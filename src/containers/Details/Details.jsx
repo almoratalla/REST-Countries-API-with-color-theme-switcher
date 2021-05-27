@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import Layout from "../Layout/Layout";
 import styles from "./Details.module.scss";
-import loaderGif from "../../assets/loaders/151.gif";
+import loaderGif from "../../assets/loaders/loader.gif";
 
 const loader = 
     (<div className={styles.container__loader}>

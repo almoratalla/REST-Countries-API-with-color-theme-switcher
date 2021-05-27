@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Header.module.scss';
 
-import moonIconDarkFill from '../../assets/images/svg/moon-fill.svg'
-import moonIconLightOutline from '../../assets/images/svg/moon-outline-light.svg'
+import moonIconDarkFill from '../../assets/images/svg/moon-fill.min.svg'
+import moonIconLightOutline from '../../assets/images/svg/moon-outline-light.min.svg'
 import { Link } from 'react-router-dom';
 
 const Header = () => {

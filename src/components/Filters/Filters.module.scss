@@ -43,12 +43,23 @@
 
         .selectbox {
             position: relative;
+            width: inherit;
+            height: inherit;
+
             label {
                 color: var(--text);
                 position: absolute;
                 top: 1rem;
                 left: 1.5625rem;
                 font-size: 0.8rem;
+            }
+
+            svg.selectsvg {
+                fill: var(--text);
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                transform: scale(0.9);
             }
     
             select.overlap {
@@ -179,6 +190,10 @@
                     top: 1rem;
                     left: 1.5625rem;
                     font-size: 1rem;
+                }
+
+                svg.selectsvg {
+                    fill: var(--text);
                 }
         
                 select.overlap {

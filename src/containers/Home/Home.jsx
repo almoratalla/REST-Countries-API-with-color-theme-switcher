@@ -3,7 +3,7 @@ import Filters from '../../components/Filters/Filters';
 import Card from '../../components/Card/Card';
 import Layout from '../Layout/Layout';
 import styles from './Home.module.scss';
-import loaderGif from "../../assets/loaders/151.gif";
+import loaderGif from "../../assets/loaders/loader.gif";
 
 const loader = 
     (<div className={styles.container__loader}>
