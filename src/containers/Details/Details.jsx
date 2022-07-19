@@ -21,17 +21,19 @@ const Details = () => {
     const onLoadDetailData = useCallback(async () => {
         try{
             setIsLoading(true)
-            const data = await fetch(`https://restcountries.eu/rest/v2/alpha/${code}`)
+            const data = await fetch(`https://restcountries.com/v2/alpha/${code}`)
             const json = await data.json();
+            console.log(json.borders);
             const bordersQuery = json.borders;
-            const bordersData = await fetch(`https://restcountries.eu/rest/v2/alpha?codes=${bordersQuery.join(';')}&fields=name`)
+            console.log(bordersQuery)
+            const bordersData = await fetch(`https://restcountries.com/v2/alpha?codes=${bordersQuery !== undefined && bordersQuery.join(';')}&fields=name`)
             const bordersJson = await bordersData.json();
             setBordersNames(bordersJson);
             setDetailData(json);
             setIsLoading(false)
         }catch(err){
             console.log(err);
-            console.err(err);
+            console.error(err);
             setDetailData({});
             setIsLoading(false);
         }

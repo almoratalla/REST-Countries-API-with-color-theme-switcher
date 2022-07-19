@@ -26,7 +26,7 @@ const Home = () => {
     const fetchCountriesData = async () => {
         try {
             setIsLoading(true);
-            const data = await fetch('https://restcountries.eu/rest/v2/all');
+            const data = await fetch('https://restcountries.com/v2/all');
             const json = await data.json();
             setCountriesData(json)
             setIsLoading(false)
